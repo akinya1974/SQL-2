@@ -65,19 +65,3 @@ ORDER BY sales DESC;
 
 
 ![Link](https://github.com/akinya1974/SQL-2/blob/main/JPG/Задание-4.jpg)
-
-## Задание-5
-
-### 5. `Найдите фильмы, которые ни разу не брали в аренду.`
-```
-SELECT f.title, f.release_year, p.amount, p.payment_date, r.return_date
-FROM payment p
-JOIN rental r ON r.rental_id = p.rental_id
-JOIN inventory i ON i.inventory_id = r.inventory_id
-JOIN film f ON f.film_id = i.film_id
-WHERE p.amount = 0
-ORDER BY f.title;
-```
-
-
-![Link](https://github.com/akinya1974/SQL-2/blob/main/JPG/Задание-5.jpg)
